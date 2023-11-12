@@ -9,11 +9,15 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
+        'hero': "url('/tcv-scrum.png')",
+      }
     },
+    colors: {
+      'bg': '#121314',
+      'primary': '#f4f2ee',
+      'secondary': '#b8b0a5',
+      'purple': '#c058de'
+    }
   },
   plugins: [],
 }
