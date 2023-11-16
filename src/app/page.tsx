@@ -13,7 +13,7 @@ const montserrat = Montserrat({ weight: "400", subsets: ["latin"] })
 
 export default function Home() {
   return (
-    <main className={"flex flex-col items-center justify-start"}>
+    <main className={"flex flex-col h-screen items-center justify-start"}>
       {/* Add items from components/ folder to create page layout */}
       {Header("The Kinscape City Varsity VI", bebas)}
       {Title("The biggest rugby clash of the year", "11.03.23", bebas)}
