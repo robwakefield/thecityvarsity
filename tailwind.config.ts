@@ -16,7 +16,8 @@ const config: Config = {
       'bg': '#121314',
       'primary': '#f4f2ee',
       'secondary': '#b8b0a5',
-      'purple': '#c058de'
+      'purple': '#c058de',
+      'btn-purple': '#8529a1'
     }
   },
   plugins: [],
