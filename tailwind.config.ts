@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        'hero': "url('/tcv-scrum.png')",
+        'hero': "url('/thecityvarsity/tcv-scrum.png')",
       }
     },
     colors: {
