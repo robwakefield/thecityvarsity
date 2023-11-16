@@ -18,8 +18,16 @@ export default function Home() {
     <main className={"flex flex-col h-screen items-center justify-start"}>
       {/* Add items from components/ folder to create page layout */}
       {Header("THE KINSCAPE CITY VARSITY VI", archivo)}
-      {Title("The biggest rugby clash of the year", "11.03.23", "Buy Tickets", "https://fixr.co/event/the-city-varsity-vi-tickets-958196957", archivo)}
-      {CenteredText("About The City Varsity", archivo, "The City Varsity is an exhibition rugby match between Imperial College London and London School of Economics, held annually at the world-class facilities of Rosslyn Park RFC. It is a completely student-led initiative and aims to remain an event created by students, for students. It has proven to be a great success in previous years with hundreds of spectators attending to witness both men’s and women’s game and the trophies - JP Morgan Shield and the Rees Rawlings Cup – being awarded.", montserrat)}
+
+      {Title("THE BIGGEST RUGBY CLASH OF THE YEAR", 
+              "11.03.23",
+              "BUY TICKETS", 
+              "https://fixr.co/event/the-city-varsity-vi-tickets-958196957", 
+              archivo)}
+
+      {CenteredText("About The City Varsity", archivo, 
+                    "The City Varsity is an exhibition rugby match between Imperial College London and London School of Economics, held annually at the world-class facilities of Rosslyn Park RFC. It is a completely student-led initiative and aims to remain an event created by students, for students. It has proven to be a great success in previous years with hundreds of spectators attending to witness both men’s and women’s game and the trophies - JP Morgan Shield and the Rees Rawlings Cup – being awarded.", montserrat)}
+      
       {TextRow([
         TextRowItem("Event History", montserrat, "Started in 2017 to support Matt Hampson foundation, the event proved most popular among the students of both Imperial and LSE, attracting almost 1000 spectators every year.", montserrat),
         TextRowItem("Matt Hampson Foundation", montserrat, "Matt has started his foundation in 2011 to help people suffering from serious sport injuries. All our profits go to Matt Hampson foundation.", montserrat, "Find Out More", archivo)])}
