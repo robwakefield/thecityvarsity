@@ -12,7 +12,7 @@ export function TextRowItem(title: String, titleFont: NextFont, text: String, te
   if (buttonText !== undefined && buttonFont !== undefined) {
     button = <div>
       <button className={"bg-purple rounded-sm mt-4 "+buttonFont.className}>
-        <h1 className="py-4 px-8 text-lg text-primary">{buttonText}</h1>
+        <h1 className="py-4 px-8 text-lg text-primary">{buttonText.toUpperCase()}</h1>
       </button>
     </div>
   }
