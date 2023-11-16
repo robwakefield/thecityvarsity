@@ -1,10 +1,14 @@
+'use client'
+
 import { NextFont } from "next/dist/compiled/@next/font";
+import { useRouter } from "next/navigation";
 
 // Displays image specified in tailwind.config.ts with title and subtitile overlay
-export default function Title(title: String, subtitle: String, buttonText: String, font: NextFont) {
+export default function Title(title: string, subtitle: string, buttonText: string, ticketLink: string, font: NextFont) {
+  const router = useRouter()
   const button = <div>
-      <button className={"bg-btn-purple rounded-sm my-4 "+font.className}>
-        <h1 className="py-2 md:py-4 px-4 md:px-16 text-lg md:text-xl text-primary">{buttonText}</h1>
+      <button className={"bg-btn-purple rounded-sm my-4 "+font.className} onClick={() => router.push(ticketLink)}>
+        <h1 className="py-2 md:py-4 px-4 md:px-16 text-lg md:text-xl text-primary">{buttonText}</h1>  
       </button>
     </div>
   // TODO: Fix responsive min height
