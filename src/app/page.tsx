@@ -9,6 +9,7 @@ import Title from '@/components/title'
 import CenteredText from '@/components/text'
 import { TextRow, TextRowItem } from '@/components/textRow'
 import { Partners, PartnerItem, PartnerContact } from '@/components/partners'
+import { Timeline, TimelineItem } from '@/components/timeline'
 
 // If loading a variable font, you don't need to specify the font weight
 const archivo = Archivo_Black({ weight: "400", subsets: ["latin"] })
@@ -52,8 +53,44 @@ export default function Home() {
           "/thecityvarsity/partners/core_power.webp", 
           "Learn More", archivo, "https://www.google.co.uk"
         )],
-        PartnerContact("Interested in becoming a sponsor of TCV VI?", montserrat, "Contact Us", archivo, "link")
+        PartnerContact(
+          "Interested in becoming a sponsor of TCV VI?", montserrat,
+          "Contact Us", archivo, "link")
       )}
+
+      {Timeline("Schedule of Events", archivo, [
+        TimelineItem(
+          "Gates Open",
+          "Come early to save yourself a seat at the stands and watch our teams warm up as you enjoy a selection of delicious takeaway food on site",
+          "4.30pm",
+          "Rosslyn Park",
+          montserrat,
+          "11/03/2023"),
+        TimelineItem(
+          "Women's Match",
+          "Support your team as the women from Imperial and LSE clash on the grass of Rosslyn Park",
+          "5pm - 6.30pm",
+          "Rosslyn Park",
+          montserrat),
+        TimelineItem(
+          "Men's Match",
+          "See who comes out on top in this year's edition of the biggest rivalry among London's unis.",
+          "7pm - 9pm",
+          "Rosslyn Park",
+          montserrat),
+        TimelineItem(
+          "Award Ceremony",
+          "The crowning of the winners and the post-game meals",
+          "9.15pm",
+          "Rosslyn Park",
+          montserrat),
+        TimelineItem(
+          "Afterparty",
+          "Celebrate with the players at Tiger Tiger! - our coaches will take you directly from Rosslyn to the club",
+          "10pm - Late",
+          "Tiger Tiger London",
+          montserrat)
+      ])}
 
     </main>
   )
