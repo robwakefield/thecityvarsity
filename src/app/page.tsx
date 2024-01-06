@@ -10,6 +10,7 @@ import CenteredText from '@/components/text'
 import { TextRow, TextRowItem } from '@/components/textRow'
 import { Partners, PartnerItem, PartnerContact } from '@/components/partners'
 import { Timeline, TimelineItem } from '@/components/timeline'
+import { Gallery } from '@/components/gallery'
 
 // If loading a variable font, you don't need to specify the font weight
 const archivo = Archivo_Black({ weight: "400", subsets: ["latin"] })
@@ -90,6 +91,12 @@ export default function Home() {
           "10pm - Late",
           "Tiger Tiger London",
           montserrat)
+      ])}
+
+      {Gallery([
+        "/gallery/pic1.webp",
+        "/gallery/pic2.webp",
+        "/gallery/pic3.webp"
       ])}
 
     </main>
