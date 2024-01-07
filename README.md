@@ -2,4 +2,4 @@
 
 Promotional website for The City Varsity rugby match played between Imperial College London and London School of Economics.
 
-Accessible at [www.thecityvarsity.co.uk](www.thecityvarsity.co.uk)
+Accessible at [www.thecityvarsity.co.uk](https://www.thecityvarsity.co.uk)
