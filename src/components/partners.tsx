@@ -26,7 +26,7 @@ export function PartnerItem(title: string, text: String, logoPath: string, butto
   }
 
   // Split text on newline
-  let lines = text.split("\n").map((l) => {return <p className="text-l text-secondary">{l}</p>})
+  let lines = text.split("\n").map((l) => {return <p className="text-l text-secondary" key={crypto.randomUUID()}>{l}</p>})
 
   return <div className="py-6 w-full text-center flex flex-row" key={crypto.randomUUID()}>
       <div className="w-1/2">
