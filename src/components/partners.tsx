@@ -1,7 +1,6 @@
 'use client'
 
 import Image from "next/image"
-import { useRouter } from "next/navigation";
 import { Archivo_Black } from 'next/font/google'
 import { Button } from '@/components/button'
 
@@ -29,7 +28,7 @@ export function PartnerItem(title: string, text: String, logoPath: string, butto
   // Split text on newline
   let lines = text.split("\n").map((l) => {return <p className="text-l text-secondary">{l}</p>})
 
-  return <div className="py-6 w-full text-center flex flex-row" key={crypto.randomUUID() }>
+  return <div className="py-6 w-full text-center flex flex-row" key={crypto.randomUUID()}>
       <div className="w-1/2">
         <Image src={logoPath} width="400" height="400" alt={title}></Image>
       </div>

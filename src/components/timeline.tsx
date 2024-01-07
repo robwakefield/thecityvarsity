@@ -11,7 +11,7 @@ export function Timeline(title: String, items: JSX.Element[]) {
       <h1 className={"pb-4 text-4xl text-purple "+archivo.className}>{title.toUpperCase()}</h1>
       <div className="py-6 w-full divide-y divide-secondary/50">
         {items}
-        <div></div>
+        <div key={crypto.randomUUID()}></div>
       </div>
     </div>
   </div>

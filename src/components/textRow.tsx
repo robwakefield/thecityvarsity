@@ -16,7 +16,7 @@ export function TextRowItem(title: String, text: String, buttonText?: String) {
     button = Button(buttonText.toUpperCase())
   }
 
-  return <div className="py-6 px-10 w-screen text-center" key={crypto.randomUUID() }>
+  return <div className="py-6 px-10 w-screen text-center" key={crypto.randomUUID()}>
       <h1 className={"pb-4 text-xl text-purple"+archivo.className}>{title}</h1>
       <p className="text-l text-secondary">{text}</p>
       {button}
