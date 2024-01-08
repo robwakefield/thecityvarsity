@@ -3,7 +3,7 @@
 // Import components to use here
 import Header from '@/components/header'
 import Title from '@/components/title'
-import CenteredText from '@/components/text'
+import AboutText from '@/components/about'
 import { TextRow, TextRowItem } from '@/components/textRow'
 import { Partners, PartnerItem, PartnerContact } from '@/components/partners'
 import { Timeline, TimelineItem } from '@/components/timeline'
@@ -24,7 +24,7 @@ export default function Home() {
               "https://fixr.co/event/the-city-varsity-vi-tickets-958196957"
             )}
 
-      {CenteredText("About The City Varsity", 
+      {AboutText("About The City Varsity", 
                     "The City Varsity is an exhibition rugby match between Imperial College London and London School of Economics, held annually at the world-class facilities of Rosslyn Park RFC. It is a completely student-led initiative and aims to remain an event created by students, for students. It has proven to be a great success in previous years with hundreds of spectators attending to witness both men’s and women’s game and the trophies - JP Morgan Shield and the Rees Rawlings Cup – being awarded."
                     )}
       
