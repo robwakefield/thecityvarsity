@@ -51,7 +51,7 @@ export function PartnerItem(title: string, text: String, logoPath: string, butto
 }
 
 export function PartnerContact(text: string, buttonText: String, buttonLink: string) {
-  return <div className="px-6 my-6 center text-center flex flex-col items-center">
+  return <div className="px-6 mb-6 md:my-6 center text-center flex flex-col items-center">
       <h1 className="text-xl text-white">{text}</h1>
       {Button(buttonText.toUpperCase(), buttonLink)}
     </div>
