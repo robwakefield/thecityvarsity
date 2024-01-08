@@ -38,7 +38,7 @@ export default function Home() {
           "Find Out More"
         )])}
 
-      {Partners("OUR PARTNERS", [
+      {Partners([
         PartnerItem(
           "Kinscape", 
           "Kinscape, Your Private Social Network\nBuild Private Communities\nShare Life Experiences Safely\nCelebrate the Stories\n\nSign up and be one of the first to try it!",

@@ -6,10 +6,10 @@ import { Button } from '@/components/button'
 
 const archivo = Archivo_Black({ weight: "400", subsets: ["latin"] })
 
-export function Partners(title: String, items: JSX.Element[], contact: JSX.Element) {
+export function Partners(items: JSX.Element[], contact: JSX.Element) {
   return <div className="flex flex-col items-center w-screen bg-black px-5 justify-center">
     <div className="py-6 max-w-4xl text-center">
-      <h1 className={"pb-4 text-4xl text-purple "+archivo.className}>{title.toUpperCase()}</h1>
+      <h1 className={"py-4 text-4xl text-purple "+archivo.className}>OUR PARTNERS</h1>
       <div className="w-full">
         {items}
       </div>
@@ -26,28 +26,32 @@ export function PartnerItem(title: string, text: String, logoPath: string, butto
   }
 
   // Split text on newline
-  let lines = text.split("\n").map((l) => {return <p className="text-l text-secondary" key={crypto.randomUUID()}>{l}</p>})
+  let lines = text.split("\n").map((l) => {
+    if (l.length == 0) {
+      return <br/>
+    } else {
+      return <p className="text-l text-secondary" key={crypto.randomUUID()}>{l}</p>
+    }
+    })
 
-  let leftElement = <div className="w-1/2">
-                      <Image src={logoPath} width="400" height="400" alt={title}></Image>
-                    </div>
+  const flex_classname = RTL ? "md:flex-row-reverse" : "md:flex-row" 
 
-  let rightElement = <div className="w-1/2">
-                        <h1 className={"pb-4 text-xl text-white "+archivo.className}>{title}</h1>
-                        <div className="max-w-md">
-                          {lines}
-                        </div>
-                        {button}
-                      </div>
-
-  return <div className="py-6 w-full text-center flex flex-row" key={crypto.randomUUID()}>
-      {RTL ? rightElement : leftElement}
-      {RTL ? leftElement : rightElement}
+  return <div className={"py-6 px-6 w-full text-center justify-center flex flex-col " + flex_classname} key={crypto.randomUUID()}>
+    <div className="md:w-1/2 w-full">
+      <Image src={logoPath} width="400" height="400" alt={title}></Image>
+    </div>
+    <div className="md:w-1/2 w-full">
+      <h1 className={"pb-4 text-2xl text-white"}>{title}</h1>
+      <div className="max-w-md">
+        {lines}
+      </div>
+      {button}
+    </div>
     </div>
 }
 
 export function PartnerContact(text: string, buttonText: String, buttonLink: string) {
-  return <div className="my-6 center text-center flex flex-col items-center">
+  return <div className="px-6 my-6 center text-center flex flex-col items-center">
       <h1 className="text-xl text-white">{text}</h1>
       {Button(buttonText.toUpperCase(), buttonLink)}
     </div>
