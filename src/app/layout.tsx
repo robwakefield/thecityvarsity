@@ -4,9 +4,12 @@ import { Montserrat } from 'next/font/google'
 
 const montserrat = Montserrat({ weight: "400", subsets: ["latin"] })
 
+export const EDITION = "VI"
+
+// Browser tab title
 export const metadata: Metadata = {
-  title: 'The City Varsity VI',
-  description: 'The Kinscape City Varsity VI',
+  title: 'The City Varsity ' + EDITION,
+  description: 'The Kinscape City Varsity ' + EDITION,
 }
 
 export default function RootLayout({

@@ -20,9 +20,9 @@ export function TextRow(items: JSX.Element[]) {
     </div>
 }
 
-export function TextRowItem(title: String, text: String, buttonText?: String) {
+export function TextRowItem(title: String, text: String, buttonText?: String, buttonLink?: string) {
   // Button will only show if buttonText and buttonFont are supplied in page.tsx
-  const button = buttonText !== undefined ? Button(buttonText.toUpperCase()) : <div></div>
+  const button = buttonText !== undefined ? Button(buttonText.toUpperCase(), buttonLink) : <div></div>
 
   return <div className="py-6 px-10 max-w-xl text-center" key={crypto.randomUUID()}>
       <h1 className={"pb-4 text-xl text-purple"+archivo.className}>{title}</h1>
