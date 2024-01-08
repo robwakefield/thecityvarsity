@@ -3,8 +3,7 @@
 // Import components to use here
 import Header from '@/components/header'
 import Title from '@/components/title'
-import AboutText from '@/components/about'
-import { TextRow, TextRowItem } from '@/components/textRow'
+import { AboutText, TextRow, TextRowItem } from '@/components/about'
 import { Partners, PartnerItem, PartnerContact } from '@/components/partners'
 import { Timeline, TimelineItem } from '@/components/timeline'
 import { Gallery } from '@/components/gallery'
@@ -35,7 +34,7 @@ export default function Home() {
         ),
         TextRowItem(
           "Matt Hampson Foundation",
-          "Matt has started his foundation in 2011 to help people suffering from serious sport injuries. All our profits go to Matt Hampson foundation.",
+          "Matt started his foundation in 2011 to help people suffering from serious sport injuries. All our profits go to Matt Hampson foundation.",
           "Find Out More"
         )])}
 
