@@ -4,7 +4,7 @@ import { Montserrat } from 'next/font/google'
 
 const montserrat = Montserrat({ weight: "400", subsets: ["latin"] })
 
-export const EDITION = "VI"
+const EDITION = "VI"
 
 // Browser tab title
 export const metadata: Metadata = {

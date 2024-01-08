@@ -28,7 +28,7 @@ export function PartnerItem(title: string, text: String, logoPath: string, butto
   // Split text on newline
   let lines = text.split("\n").map((l) => {
     if (l.length == 0) {
-      return <br/>
+      return <br key={crypto.randomUUID()}/>
     } else {
       return <p className="text-l text-secondary" key={crypto.randomUUID()}>{l}</p>
     }
