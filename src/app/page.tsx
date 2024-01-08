@@ -62,7 +62,7 @@ export default function Home() {
           "Contact Us", "link")
       )}
 
-      {Timeline("Schedule of Events", [
+      {Timeline([
         TimelineItem(
           "Gates Open",
           "Come early to save yourself a seat at the stands and watch our teams warm up as you enjoy a selection of delicious takeaway food on site",
