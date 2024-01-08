@@ -18,7 +18,7 @@ export function Partners(title: String, items: JSX.Element[], contact: JSX.Eleme
   </div>
 }
 
-export function PartnerItem(title: string, text: String, logoPath: string, buttonText?: String, buttonLink?: string) {
+export function PartnerItem(title: string, text: String, logoPath: string, buttonText?: String, buttonLink?: string, RTL: boolean = false) {
   var button = <div></div>
   // Button will only show if buttonText and buttonFont are supplied in page.tsx
   if (buttonText !== undefined && buttonLink !== undefined) {
@@ -28,17 +28,21 @@ export function PartnerItem(title: string, text: String, logoPath: string, butto
   // Split text on newline
   let lines = text.split("\n").map((l) => {return <p className="text-l text-secondary" key={crypto.randomUUID()}>{l}</p>})
 
+  let leftElement = <div className="w-1/2">
+                      <Image src={logoPath} width="400" height="400" alt={title}></Image>
+                    </div>
+
+  let rightElement = <div className="w-1/2">
+                        <h1 className={"pb-4 text-xl text-white "+archivo.className}>{title}</h1>
+                        <div className="max-w-md">
+                          {lines}
+                        </div>
+                        {button}
+                      </div>
+
   return <div className="py-6 w-full text-center flex flex-row" key={crypto.randomUUID()}>
-      <div className="w-1/2">
-        <Image src={logoPath} width="400" height="400" alt={title}></Image>
-      </div>
-      <div className="w-1/2">
-        <h1 className={"pb-4 text-xl text-white "+archivo.className}>{title}</h1>
-        <div className="max-w-md">
-          {lines}
-        </div>
-        {button}
-      </div>
+      {RTL ? rightElement : leftElement}
+      {RTL ? leftElement : rightElement}
     </div>
 }
 

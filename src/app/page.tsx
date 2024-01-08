@@ -50,7 +50,7 @@ export default function Home() {
           "iNotary", 
           "iNotary Public is a flexible and modern company, whose whole ethos is based around our clients.  We have seen that notarial practice in the UK is quite dated and does not suit today’s modern business environment. We work hard to ensure that not only are our client’s requirements met,  but that this is done with the minimum fuss and distraction to our clients.",
           "/thecityvarsity/partners/iNotary.webp", 
-          "Learn More", "https://www.google.co.uk"
+          "Learn More", "https://www.google.co.uk", true
         ),
         PartnerItem(
           "CORE POWER", 
