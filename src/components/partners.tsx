@@ -8,9 +8,9 @@ const archivo = Archivo_Black({ weight: "400", subsets: ["latin"] })
 
 export function Partners(items: JSX.Element[], contact: JSX.Element) {
   return <div className="flex flex-col items-center w-screen bg-black px-5 justify-center">
-    <div className="py-6 max-w-4xl text-center">
+    <div className="py-6 text-center">
       <h1 className={"py-4 text-4xl text-purple "+archivo.className}>OUR PARTNERS</h1>
-      <div className="w-full">
+      <div>
         {items}
       </div>
     </div>
@@ -28,6 +28,7 @@ export function PartnerItem(title: string, text: String, logoPath: string, butto
   // Split text on newline
   let lines = text.split("\n").map((l) => {
     if (l.length == 0) {
+      // Two newlines (\n\n) in text produce a linebreak
       return <br key={crypto.randomUUID()}/>
     } else {
       return <p className="text-l text-secondary" key={crypto.randomUUID()}>{l}</p>
@@ -36,17 +37,17 @@ export function PartnerItem(title: string, text: String, logoPath: string, butto
 
   const flex_classname = RTL ? "md:flex-row-reverse" : "md:flex-row" 
 
-  return <div className={"py-6 px-6 w-full text-center justify-center flex flex-col " + flex_classname} key={crypto.randomUUID()}>
-    <div className="md:w-1/2 w-full">
-      <Image src={logoPath} width="400" height="400" alt={title}></Image>
-    </div>
-    <div className="md:w-1/2 w-full">
-      <h1 className={"pb-4 text-2xl text-white"}>{title}</h1>
-      <div className="max-w-md">
-        {lines}
+  return <div className={"py-6 px-6 max-w-6xl text-center justify-center flex flex-col " + flex_classname} key={crypto.randomUUID()}>
+      <div className="md:max-w-xl md:px-5 w-full px-0">
+        <Image src={logoPath} width="0" height="0" style={{width: '30vw', height: 'auto', objectFit: 'contain'}} alt={title}></Image>
       </div>
-      {button}
-    </div>
+      <div className="md:max-w-xl md:px-5 w-full px-0 flex flex-col justify-center">
+        <h1 className={"pb-4 text-2xl text-white"}>{title}</h1>
+        <div>
+          {lines}
+        </div>
+        {button}
+      </div>
     </div>
 }
 
