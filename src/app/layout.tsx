@@ -1,14 +1,14 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import { Montserrat } from 'next/font/google'
-import { EDITION } from '@/app/config'
+import { EDITION, TITLE } from '@/app/config'
 
 const montserrat = Montserrat({ weight: "400", subsets: ["latin"] })
 
 // Browser tab title
 export const metadata: Metadata = {
   title: 'The City Varsity ' + EDITION,
-  description: 'The Kinscape City Varsity ' + EDITION,
+  description: TITLE,
 }
 
 export default function RootLayout({

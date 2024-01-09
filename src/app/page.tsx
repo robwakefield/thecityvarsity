@@ -10,8 +10,8 @@ import { Gallery } from '@/components/gallery'
 import { Contact } from '@/components/contact'
 import Footer from '@/components/footer'
 import { Map } from '@/components/map'
-import { EDITION, MATCH_DATE, TICKET_LINK, LOCATION, FULL_ADDRESS, PARTNERS, 
-  AFTERPARTY_LOCATION, AFTERPARTY_TEXT } from '@/app/config'
+import { EDITION, MATCH_DATE, TICKET_LINK, LOCATION, PARTNERS, 
+  AFTERPARTY_LOCATION, AFTERPARTY_TEXT, TITLE} from '@/app/config'
 
 export default function Home() {
 
@@ -25,9 +25,7 @@ export default function Home() {
   return (
     <main className={"flex flex-col h-screen items-center justify-start"}>
       {/* Use items from components/ folder to create page layout */}
-      {Header(
-        "THE KINSCAPE CITY VARSITY " + EDITION
-      )}
+      {Header(TITLE)}
 
       {Title(
         "THE BIGGEST RUGBY CLASH OF THE YEAR", 
@@ -65,32 +63,32 @@ export default function Home() {
           "Gates Open",
           "Come early to save yourself a seat at the stands and watch our teams warm up as you enjoy a selection of delicious takeaway food on site",
           "4.30pm",
-          LOCATION,
+          LOCATION.name,
           MATCH_DATE.replaceAll(".", "/")
         ),
         TimelineItem(
           "Women's Match",
           "Support your team as the women from Imperial and LSE clash on the grass of Rosslyn Park",
           "5pm - 6.30pm",
-          LOCATION
+          LOCATION.name
         ),
         TimelineItem(
           "Men's Match",
           "See who comes out on top in this year's edition of the biggest rivalry among London's unis",
           "7pm - 9pm",
-          LOCATION,
+          LOCATION.name
         ),
         TimelineItem(
           "Award Ceremony",
           "The crowning of the winners and the post-game meals",
           "9.15pm",
-          LOCATION,
+          LOCATION.name
         ),
         TimelineItem(
           "Afterparty",
           AFTERPARTY_TEXT,
           "10pm - Late",
-          AFTERPARTY_LOCATION,
+          AFTERPARTY_LOCATION
           )
       ])}
 
@@ -102,13 +100,13 @@ export default function Home() {
 
       {Contact(
         "Do you have questions or comments about the event? Do you need special accommodations? Send us a message, and we will get back to you as soon as we can.",
-        FULL_ADDRESS,
+        LOCATION.address,
         "mailto:rugby@ic.ac.uk?subject=Information%20Regarding%20TCV"
       )}
 
       {
         // Lat/Long location of pin on map
-        Map(51.4647, -0.2461)
+        Map(LOCATION.latlon[0], LOCATION.latlon[1])
       }
 
       {Footer(
