@@ -1,10 +1,9 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import { Montserrat } from 'next/font/google'
+import { EDITION } from '@/app/config'
 
 const montserrat = Montserrat({ weight: "400", subsets: ["latin"] })
-
-const EDITION = "VI"
 
 // Browser tab title
 export const metadata: Metadata = {
