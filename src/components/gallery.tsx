@@ -7,7 +7,7 @@ export function Gallery(images: string[]) {
 
   let imgs = images.map((path) => {
     return <div className={width_ratio} key={crypto.randomUUID()}>
-      <Image src={"/thecityvarsity"+path} height={0} width={0} sizes="100vw" style={{ width: '100%', height: 'auto', objectFit: 'cover' }} alt="TCV"></Image>
+      <Image src={path} height={0} width={0} sizes="100vw" style={{ width: '100%', height: 'auto', objectFit: 'cover' }} alt="TCV"></Image>
     </div>
   })
 

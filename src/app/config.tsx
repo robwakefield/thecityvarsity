@@ -6,6 +6,13 @@ export const EDITION = "VI"
 export const MATCH_DATE = "11/03/23"
 export const TICKET_LINK = "https://fixr.co/event/the-city-varsity-vi-tickets-958196957"
 
+export const AFTERPARTY_LOCATION = "Tiger Tiger London"
+export const AFTERPARTY_TEXT = "Celebrate with the players at Tiger Tiger! - our coaches will take you directly from Rosslyn to the club"
+
+// Note: If location changes, the about text in app/page.tsx should also be changed as it mentions Rosslyn Park
+export const LOCATION = "Rosslyn Park"
+export const FULL_ADDRESS = "Rosslyn Park Rugby Club, London, England SW15 5LB, United Kingdom"
+
 export const PARTNERS = [
   {
     name: "Kinscape", 

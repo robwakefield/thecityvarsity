@@ -10,7 +10,8 @@ import { Gallery } from '@/components/gallery'
 import { Contact } from '@/components/contact'
 import Footer from '@/components/footer'
 import { Map } from '@/components/map'
-import { EDITION, MATCH_DATE, TICKET_LINK, PARTNERS } from '@/app/config'
+import { EDITION, MATCH_DATE, TICKET_LINK, LOCATION, FULL_ADDRESS, PARTNERS, 
+  AFTERPARTY_LOCATION, AFTERPARTY_TEXT } from '@/app/config'
 
 export default function Home() {
 
@@ -55,7 +56,7 @@ export default function Home() {
 
       {Partners(partnerItems,
         PartnerContact(
-          "Interested in becoming a sponsor of TCV VI?",
+          "Interested in becoming a sponsor of TCV " + EDITION + "?",
           "Contact Us", "mailto:rugby@ic.ac.uk?subject=TCV%20Sponsorship")
       )}
 
@@ -64,44 +65,44 @@ export default function Home() {
           "Gates Open",
           "Come early to save yourself a seat at the stands and watch our teams warm up as you enjoy a selection of delicious takeaway food on site",
           "4.30pm",
-          "Rosslyn Park",
+          LOCATION,
           MATCH_DATE.replaceAll(".", "/")
         ),
         TimelineItem(
           "Women's Match",
           "Support your team as the women from Imperial and LSE clash on the grass of Rosslyn Park",
           "5pm - 6.30pm",
-          "Rosslyn Park"
+          LOCATION
         ),
         TimelineItem(
           "Men's Match",
           "See who comes out on top in this year's edition of the biggest rivalry among London's unis.",
           "7pm - 9pm",
-          "Rosslyn Park",
+          LOCATION,
         ),
         TimelineItem(
           "Award Ceremony",
           "The crowning of the winners and the post-game meals",
           "9.15pm",
-          "Rosslyn Park",
+          LOCATION,
         ),
         TimelineItem(
           "Afterparty",
-          "Celebrate with the players at Tiger Tiger! - our coaches will take you directly from Rosslyn to the club",
+          AFTERPARTY_TEXT,
           "10pm - Late",
-          "Tiger Tiger London",
+          AFTERPARTY_LOCATION,
           )
       ])}
 
       {Gallery([
-        "/gallery/pic1.webp",
-        "/gallery/pic2.webp",
-        "/gallery/pic3.webp"
+        "/thecityvarsity/gallery/pic1.webp",
+        "/thecityvarsity/gallery/pic2.webp",
+        "/thecityvarsity/gallery/pic3.webp"
       ])}
 
       {Contact(
         "Do you have questions or comments about the event? Do you need special accommodations? Send us a message, and we will get back to you as soon as we can.",
-        "Rosslyn Park Rugby Club, London, England SW15 5LB, United Kingdom",
+        FULL_ADDRESS,
         "mailto:rugby@ic.ac.uk?subject=Information%20Regarding%20TCV"
       )}
 
