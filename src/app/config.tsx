@@ -36,3 +36,7 @@ export const PARTNERS = [
     buttonLink: "https://corepower.energy/"
   }
 ]
+
+/*
+  To update the Schedule of Events, edit app/page.tsx
+*/
