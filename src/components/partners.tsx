@@ -39,7 +39,7 @@ export function PartnerItem(title: string, text: String, logoPath: string, butto
 
   return <div className={"py-6 px-6 max-w-6xl text-center justify-center flex flex-col " + flex_classname} key={crypto.randomUUID()}>
       <div className="md:max-w-xl md:px-5 w-full px-0">
-        <Image src={logoPath} width="0" height="0" style={{width: 'auto', height: '80%', objectFit: 'contain'}} alt={title}></Image>
+        <Image src={logoPath} width="0" height="0" style={{width: '100%', height: 'auto', objectFit: 'contain'}} alt={title}></Image>
       </div>
       <div className="md:max-w-xl md:px-5 w-full px-0 flex flex-col justify-center">
         <h1 className={"pb-4 text-2xl text-white"}>{title}</h1>
