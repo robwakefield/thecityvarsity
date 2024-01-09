@@ -13,8 +13,6 @@ import { Map } from '@/components/map'
 import { EDITION, MATCH_DATE, TICKET_LINK, LOCATION, PARTNERS, 
   AFTERPARTY_LOCATION, AFTERPARTY_TEXT, TITLE} from '@/app/config'
 
-const hello = process.env.NODE_PUBLIC_HELLO as string
-
 export default function Home() {
 
   // Construct PartnerItems using PARTNERS from app/config.tsx
@@ -23,9 +21,6 @@ export default function Home() {
     const p = PARTNERS[i];
     partnerItems.push(PartnerItem(p.name, p.description, p.image, p.buttonText, p.buttonLink, i % 2 != 0))
   }
-
-  console.log("hello:")
-  console.log(hello)
 
   return (
     <main className={"flex flex-col h-screen items-center justify-start"}>
