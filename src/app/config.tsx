@@ -5,7 +5,7 @@
 export const EDITION = "VII"
 export const TITLE = "The Kinscape City Varsity " + EDITION
 export const MATCH_DATE = "02/03/24"
-export const TICKET_LINK = "https://fixr.co/event/the-city-varsity-vi-tickets-958196957"
+export const TICKET_LINK = "https://www.fatsoma.com/e/tjxl4vd9/the-city-varsity-vii?utm_campaign=prom_ss&utm_medium=social&utm_source=dynamic"
 
 export const AFTERPARTY_LOCATION = "Tiger Tiger London"
 export const AFTERPARTY_TEXT = "Celebrate with the players at Tiger Tiger! - our coaches will take you directly from Rosslyn to the club"
