@@ -2,7 +2,7 @@
 
 // Import components to use here
 import Header from '@/components/header'
-import Title from '@/components/title'
+import Title from '@/components/titlenotickets'
 import { AboutText, TextRow, TextRowItem } from '@/components/about'
 import { Partners, PartnerItem, PartnerContact } from '@/components/partners'
 import { Timeline, TimelineItem } from '@/components/timeline'
@@ -29,9 +29,9 @@ export default function Home() {
 
       {Title(
         "THE BIGGEST RUGBY CLASH OF THE YEAR", 
-        MATCH_DATE.replaceAll("/", "."),
-        "BUY TICKETS", 
-        TICKET_LINK
+        MATCH_DATE.replaceAll("/", ".")
+        //"BUY TICKETS", 
+        //TICKET_LINK
       )}
 
       {AboutText(
@@ -83,13 +83,13 @@ export default function Home() {
           "The crowning of the winners and the post-game meals",
           "9.15pm",
           LOCATION.name
-        ),
-        TimelineItem(
-          "Afterparty",
-          AFTERPARTY_TEXT,
-          "10pm - Late",
-          AFTERPARTY_LOCATION
-          )
+        )
+        //TimelineItem(
+        //  "Afterparty",
+        //  AFTERPARTY_TEXT,
+        //  "10pm - Late",
+        //  AFTERPARTY_LOCATION
+        //  )
       ])}
 
       {Gallery([
