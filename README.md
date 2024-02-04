@@ -1,7 +1,5 @@
 ## The City Varsity Website
 
-![](https://github.com/robwakefield/thecityvarsity/actions/workflows/nextjs.yml/badge.svg)
-
 Promotional website for The City Varsity rugby match played between Imperial College London and London School of Economics.
 
 Accessible at [www.thecityvarsity.co.uk](https://www.thecityvarsity.co.uk)
