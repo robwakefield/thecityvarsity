@@ -84,12 +84,14 @@ export default function Home() {
           "9.15pm",
           LOCATION.name
         ),
+        /*
         TimelineItem(
           "Afterparty",
           AFTERPARTY_TEXT,
           "10pm - Late",
           AFTERPARTY_LOCATION
           )
+        */
       ])}
 
       {Gallery([
