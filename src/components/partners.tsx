@@ -42,7 +42,7 @@ export function PartnerItem(title: string, text: String, logoPath: string, butto
         <Image src={logoPath} width="0" height="0" style={{width: '100%', height: 'auto', objectFit: 'contain'}} alt={title}></Image>
       </div>
       <div className="md:max-w-xl md:px-5 w-full px-0 flex flex-col justify-center">
-        <h1 className={"pb-4 text-2xl text-white"}>{title}</h1>
+        <h1 className={"pb-4 text-2xl text-primary"}>{title}</h1>
         <div>
           {lines}
         </div>

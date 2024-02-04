@@ -14,8 +14,8 @@ const config: Config = {
     },
     colors: {
       'bg': '#121314',
-      'primary': '#b8b0a5',
-      'secondary': '#b8b0a5',
+      'primary': '#f4f2ee',
+      'secondary': '#d8cfc3',
       'purple': '#c058de',
       'btn-purple': '#8529a1'
     }
