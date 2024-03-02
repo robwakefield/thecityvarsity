@@ -16,10 +16,22 @@ export default function Title(title: string, subtitle: string, buttonText: strin
     router.push(ticketLink)
   }
 
-  const button = <div>
+  const ticketButton = <div>
       <button className={"bg-btn-purple w-5/6 sm:w-fit mt-8 "+archivo.className} onClick={onClick}>
         <h1 className="py-4 md:py-4 px-4 md:px-16 text-md sm:text-lg md:text-xl text-primary">{buttonText}</h1>  
       </button>
+    </div>
+
+  const onProgramClick = () => {
+    // TODO: Change this to be optional and provided in config.tsx
+    posthog.capture('Button Click', {'buttonText': "View Programme".toUpperCase(), 'buttonLink': "https://drive.google.com/file/d/1FumcCWDAP5HN2uaeAIyZ84CoWsee4a6V/view?usp=sharing"})
+    router.push("https://drive.google.com/file/d/1FumcCWDAP5HN2uaeAIyZ84CoWsee4a6V/view?usp=sharing")
+  }
+
+  const programButton = <div>
+    <button className={"bg-btn-purple w-5/6 sm:w-fit mt-8 "+archivo.className} onClick={onProgramClick}>
+      <h1 className="py-4 md:py-4 px-4 md:px-9 text-md sm:text-lg md:text-xl text-primary">{"View Programme".toUpperCase()}</h1>  
+    </button>
     </div>
 
   return <div className="w-screen min-h-[500px] h-[40%] md:h-[50%] lg:h-[75%] bg-hero bg-no-repeat bg-center bg-cover">
@@ -31,7 +43,8 @@ export default function Title(title: string, subtitle: string, buttonText: strin
           <h2 className="text-xl md:text-3xl">
             <b>{subtitle}</b>
           </h2>
-          {button}
+          {ticketButton}
+          {programButton}
         </div>
       </div>  
     </div>
