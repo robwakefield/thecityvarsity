@@ -18,7 +18,7 @@ export default function Home() {
   // Construct PartnerItems using PARTNERS from app/config.tsx
   var partnerItems = []
   for (let i = 0; i < PARTNERS.length; i++) {
-    const p = PARTNERS[i];
+    const p = PARTNERS[i] as { name: string, description: string, image: string, buttonText: string, buttonLink: string };
     partnerItems.push(PartnerItem(p.name, p.description, p.image, p.buttonText, p.buttonLink, i % 2 != 0))
   }
 
