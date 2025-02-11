@@ -2,13 +2,16 @@
   IMPORTANT DATA TO UPDATE ANNUALLY
 */
 
-export const EDITION = "VII"
+export const EDITION = "VIII"
 export const TITLE = "The Kinscape City Varsity " + EDITION
-export const MATCH_DATE = "02/03/24"
-export const TICKET_LINK = "https://fatso.ma/ZkVF"
+export const MATCH_DATE = "08/03/25"
+export const TICKET_LINK = "https://fatso.ma/1jv1"
+export const PROGRAMME_LINK = ""
 
-export const AFTERPARTY_LOCATION = "Tiger Tiger London"
-export const AFTERPARTY_TEXT = "Celebrate with the players at Tiger Tiger! - our coaches will take you directly from Rosslyn to the club"
+export const CONTACT_EMAIL = "rugby@ic.ac.uk"
+
+export const AFTERPARTY_LOCATION = "" // "Tiger Tiger London"
+export const AFTERPARTY_TEXT = "" // "Celebrate with the players at Tiger Tiger! - our coaches will take you directly from Rosslyn to the club"
 
 // Note: If location changes, the about text in app/page.tsx should also be changed as it mentions Rosslyn Park
 export const LOCATION = {
@@ -18,6 +21,7 @@ export const LOCATION = {
 }
 
 export const PARTNERS = [
+  /*
   {
     name: "Kinscape", 
     description: "Kinscape, Your Private Social Network\nBuild Private Communities\nShare Life Experiences Safely\nCelebrate the Stories\n\nSign up and be one of the first to try it!",
@@ -32,7 +36,6 @@ export const PARTNERS = [
     buttonText: "Learn More",
     buttonLink: "https://64invest.com/"
   }
-  /*
   {
     name: "CORE POWER", 
     description: "CORE POWER has rapidly emerged as the global frontrunner in the development  of new nuclear technologies for the maritime sector, partnering with leading international power, engineering and nuclear innovation  companies to deliver durable zero-emission energy for floating industrial production and deep-sea shipping.",

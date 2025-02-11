@@ -9,7 +9,10 @@ const archivo = Archivo_Black({ weight: "400", subsets: ["latin"] })
 export function Partners(items: JSX.Element[], contact: JSX.Element) {
   return <div className="flex flex-col items-center w-screen bg-black px-5 justify-center">
     <div className="py-6 text-center">
-      <h1 className={"py-4 text-4xl text-purple "+archivo.className}>OUR PARTNERS</h1>
+      {
+        items.length > 0 &&
+        <h1 className={"py-4 text-4xl text-purple "+archivo.className}>OUR PARTNERS</h1>
+      }
       <div>
         {items}
       </div>
