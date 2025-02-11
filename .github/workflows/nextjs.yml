@@ -63,6 +63,7 @@ jobs:
           static_site_generator: next
       - name: Restore cache
         uses: actions/cache@v3
+        id: cache-nextjs
         with:
           path: |
             .next/cache
@@ -72,6 +73,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
       - name: Install dependencies
+        if: steps.cache-nextjs.outputs.cache-hit != 'true'
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: 'Create env file'
         run: |
