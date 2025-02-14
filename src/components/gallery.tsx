@@ -11,7 +11,20 @@ export function Gallery(images: string[]) {
     </div>
   })
 
-  return <div className="w-full flex flex-row">
+  // Layout for mobile
+  let grid_cols = "grid-cols-2"
+  if (images.length === 1) {
+    grid_cols = "grid-cols-1"
+  } else if (images.length === 2 || images.length === 4) {
+    grid_cols = "grid-cols-2"
+  } else if (images.length === 3) {
+    grid_cols = "grid-cols-3"
+  } else {
+    // Only display up to 4 images
+    imgs = imgs.slice(0, 4)
+  }
+
+  return <div className={`w-full md:flex md:flex-row grid ${grid_cols}`}>
       {imgs}
     </div>
 }

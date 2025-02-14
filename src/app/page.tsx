@@ -11,7 +11,8 @@ import { Contact } from '@/components/contact'
 import Footer from '@/components/footer'
 import { Map } from '@/components/map'
 import { EDITION, MATCH_DATE, TICKET_LINK, LOCATION, PARTNERS, 
-  AFTERPARTY_LOCATION, AFTERPARTY_TEXT, TITLE, CONTACT_EMAIL} from '@/app/config'
+  AFTERPARTY_LOCATION, AFTERPARTY_TEXT, TITLE, CONTACT_EMAIL, 
+  IMAGE_GALLERY, SHOW_FATSOMA_WIDGET} from '@/app/config'
 
 import dynamic from 'next/dynamic'
 const FatsomaWidget = dynamic(() => import('@/components/fatsomaWidget'), { ssr: false })
@@ -43,7 +44,7 @@ export default function Home() {
       )}
 
       {/* Optional Fatsoma Widget. See fatsomaWidget.tsx for the widget URL */}
-      <FatsomaWidget />
+      {SHOW_FATSOMA_WIDGET && <FatsomaWidget />}
       
       {TextRow([
         TextRowItem(
@@ -100,11 +101,7 @@ export default function Home() {
         */
       ])}
 
-      {Gallery([
-        "/thecityvarsity/gallery/pic1.webp",
-        "/thecityvarsity/gallery/pic2.webp",
-        "/thecityvarsity/gallery/pic3.webp"
-      ])}
+      {Gallery(IMAGE_GALLERY)}
 
       {Contact(
         "Do you have questions or comments about the event? Do you need special accommodations? Send us a message, and we will get back to you as soon as we can.",

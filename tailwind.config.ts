@@ -9,7 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        'hero': "url('/thecityvarsity/cover.png')",
+        'hero': "url('/thecityvarsity/cover.webp')",
+        'hero-mobile': "url('/thecityvarsity/cover-mobile.webp')",
       }
     },
     colors: {

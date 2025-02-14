@@ -6,6 +6,7 @@ export const EDITION = "VIII"
 export const TITLE = "The Fennex City Varsity " + EDITION
 export const MATCH_DATE = "08/03/25"
 export const TICKET_LINK = "https://fatso.ma/1jv1"
+export const SHOW_FATSOMA_WIDGET = true
 export const PROGRAMME_LINK = ""
 
 export const CONTACT_EMAIL = "rugby@ic.ac.uk"
@@ -20,7 +21,21 @@ export const LOCATION = {
   latlon: [51.4647, -0.2461]
 }
 
-// Note: The partners images must be saved in both public/partners and public/thecityvarsity/partners. Simlarly for gallery images.
+/*
+  To update the hero image, save the desktop image as public/thecityvarsity/cover.webp and the mobile image as public/thecityvarsity/cover-mobile.webp (or update the file path in tailwind.config.ts)
+  Note: The images must also be saved as public/cover.webp and public/cover-mobile.webp
+*/
+
+// Display up to 4 images. Resizing images to 1280x853px .webp is recommended.
+// Note: The images must be saved in public/thecityvarsity/gallery and public/gallery
+export const IMAGE_GALLERY = [
+    "/thecityvarsity/gallery/womens-team.webp",
+    "/thecityvarsity/gallery/scrum.webp",
+    "/thecityvarsity/gallery/mens-cheer.webp",
+    "/thecityvarsity/gallery/postgame.webp"
+]
+
+// Note: The partners images must be saved in both public/partners and public/thecityvarsity/partners
 export const PARTNERS = [
     {
         name: "Fennex", 
@@ -57,5 +72,5 @@ export const PARTNERS = [
 ]
 
 /*
-  To update the Schedule of Events or Gallery images, edit app/page.tsx
+  To update the Schedule of Events, edit app/page.tsx
 */
