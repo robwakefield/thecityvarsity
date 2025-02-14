@@ -21,7 +21,7 @@ export function Partners(items: JSX.Element[], contact: JSX.Element) {
   </div>
 }
 
-export function PartnerItem(title: string, text: String, logoPath: string, buttonText?: String, buttonLink?: string, RTL: boolean = false) {
+export function PartnerItem(title: string, text: String, logoPath: string, buttonText?: String, buttonLink?: string, imageScale: number = 1, RTL: boolean = false) {
   var button = <div></div>
   // Button will only show if buttonText and buttonFont are supplied in page.tsx
   if (buttonText !== undefined && buttonLink !== undefined) {
@@ -42,7 +42,7 @@ export function PartnerItem(title: string, text: String, logoPath: string, butto
 
   return <div className={"py-6 px-6 max-w-6xl text-center justify-center flex flex-col " + flex_classname} key={crypto.randomUUID()}>
       <div className="md:max-w-xl md:px-5 w-full px-0">
-        <Image src={logoPath} width="0" height="0" style={{width: '100%', height: 'auto', objectFit: 'contain'}} alt={title}></Image>
+        <Image src={logoPath} width="0" height="0" style={{width: '100%', height: 'auto', objectFit: 'contain', transform: `scale(${imageScale})`}} alt={title}></Image>
       </div>
       <div className="md:max-w-xl md:px-5 w-full px-0 flex flex-col justify-center">
         <h1 className={"pb-4 text-2xl text-primary"}>{title}</h1>

@@ -3,7 +3,7 @@
 */
 
 export const EDITION = "VIII"
-export const TITLE = "The Kinscape City Varsity " + EDITION
+export const TITLE = "The Fennex City Varsity " + EDITION
 export const MATCH_DATE = "08/03/25"
 export const TICKET_LINK = "https://fatso.ma/1jv1"
 export const PROGRAMME_LINK = ""
@@ -20,15 +20,25 @@ export const LOCATION = {
   latlon: [51.4647, -0.2461]
 }
 
+// Note: The partners images must be saved in both public/partners and public/thecityvarsity/partners. Simlarly for gallery images.
 export const PARTNERS = [
+    {
+        name: "Fennex", 
+        description: "",
+        image: "/thecityvarsity/partners/fennex.png",
+        buttonText: "Learn More",
+        buttonLink: "https://fennex.net/",
+        imageScale: 0.75
+    },
+    {
+        name: "Kinscape", 
+        description: "Kinscape, Your Private Social Network\nBuild Private Communities\nShare Life Experiences Safely\nCelebrate the Stories\n\nSign up and be one of the first to try it!",
+        image: "/thecityvarsity/partners/kinscape.webp", 
+        buttonText: "Learn More",
+        buttonLink: "https://www.kinscape.com/",
+        imageScale: 1
+    },
   /*
-  {
-    name: "Kinscape", 
-    description: "Kinscape, Your Private Social Network\nBuild Private Communities\nShare Life Experiences Safely\nCelebrate the Stories\n\nSign up and be one of the first to try it!",
-    image: "/thecityvarsity/partners/kinscape.webp", 
-    buttonText: "Learn More",
-    buttonLink: "https://www.kinscape.com/"
-  },
   {
     name: "64 Investments", 
     description: "64 Investments is a real estate corporate finance and wealth management firm. 64 Investments has been trading as a Swiss private foundation since 2008 and was incorporated in London in 2016. Having led over Euro 4 billion of transactions, the 64 Investments team uses its strong network of relationships built over 20 years to provide bespoke, highly specialist services to its clients and partners.",

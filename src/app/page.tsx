@@ -18,8 +18,8 @@ export default function Home() {
   // Construct PartnerItems using PARTNERS from app/config.tsx
   var partnerItems = []
   for (let i = 0; i < PARTNERS.length; i++) {
-    const p = PARTNERS[i] as { name: string, description: string, image: string, buttonText: string, buttonLink: string };
-    partnerItems.push(PartnerItem(p.name, p.description, p.image, p.buttonText, p.buttonLink, i % 2 != 0))
+    const p = PARTNERS[i] as { name: string, description: string, image: string, buttonText: string, buttonLink: string, imageScale: number };
+    partnerItems.push(PartnerItem(p.name, p.description, p.image, p.buttonText, p.buttonLink, p.imageScale, i % 2 != 0))
   }
 
   return (
@@ -55,7 +55,7 @@ export default function Home() {
       {Partners(partnerItems,
         PartnerContact(
           "Interested in becoming a sponsor of TCV " + EDITION + "?",
-          "Contact Us", "mailto:rugby@ic.ac.uk?subject=TCV%20Sponsorship")
+          "Contact Us", "mailto:" + CONTACT_EMAIL + "?subject=TCV%20Sponsorship")
       )}
 
       {Timeline([
@@ -80,7 +80,7 @@ export default function Home() {
         ),
         TimelineItem(
           "Award Ceremony",
-          "The crowning of the winners and the post-game meals",
+          "The crowning of the winners",
           "9.15pm",
           LOCATION.name
         ),
