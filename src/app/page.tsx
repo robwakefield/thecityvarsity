@@ -13,6 +13,9 @@ import { Map } from '@/components/map'
 import { EDITION, MATCH_DATE, TICKET_LINK, LOCATION, PARTNERS, 
   AFTERPARTY_LOCATION, AFTERPARTY_TEXT, TITLE, CONTACT_EMAIL} from '@/app/config'
 
+import dynamic from 'next/dynamic'
+const FatsomaWidget = dynamic(() => import('@/components/fatsomaWidget'), { ssr: false })
+
 export default function Home() {
 
   // Construct PartnerItems using PARTNERS from app/config.tsx
@@ -38,6 +41,9 @@ export default function Home() {
         "About The City Varsity", 
         "The City Varsity is an exhibition rugby match between Imperial College London and London School of Economics, held annually at the world-class facilities of Rosslyn Park RFC. It is a completely student-led initiative and aims to remain an event created by students, for students. It has proven to be a great success in previous years with hundreds of spectators attending to witness both men’s and women’s game and the trophies - JP Morgan Shield and the Rees Rawlings Cup – being awarded."
       )}
+
+      {/* Optional Fatsoma Widget. See fatsomaWidget.tsx for the widget URL */}
+      <FatsomaWidget />
       
       {TextRow([
         TextRowItem(
