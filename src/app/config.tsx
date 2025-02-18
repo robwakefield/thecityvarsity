@@ -39,7 +39,7 @@ export const IMAGE_GALLERY = [
 export const PARTNERS = [
     {
         name: "Fennex", 
-        description: "",
+        description: "Fennex is an innovative technology company. A trailblazer with a determination to accelerate the digital transformation of the energy sector, the company was founded in 2016 by oil and gas professionals with more than 25 years’ global industry experience.",
         image: "/thecityvarsity/partners/fennex.png",
         buttonText: "Learn More",
         buttonLink: "https://fennex.net/",
