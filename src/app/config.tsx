@@ -47,7 +47,7 @@ export const PARTNERS = [
     },
     {
         name: "Kinscape", 
-        description: "Kinscape, Your Private Social Network\nBuild Private Communities\nShare Life Experiences Safely\nCelebrate the Stories\n\nSign up and be one of the first to try it!",
+        description: "Kinscape, Your Private Social Network\nBuild Private Communities\nShare Life Experiences Safely\nCelebrate the Stories\n\nSign up to try it!",
         image: "/thecityvarsity/partners/kinscape.webp", 
         buttonText: "Learn More",
         buttonLink: "https://www.kinscape.com/",
