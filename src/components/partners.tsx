@@ -7,7 +7,7 @@ import { Button } from '@/components/button'
 const archivo = Archivo_Black({ weight: "400", subsets: ["latin"] })
 
 export function Partners(items: JSX.Element[], contact: JSX.Element) {
-  return <div className="flex flex-col items-center w-screen bg-black px-5 justify-center">
+  return <div className="flex flex-col items-center w-screen bg-[#000000] px-5 justify-center">
     <div className="py-6 text-center">
       {
         items.length > 0 &&
