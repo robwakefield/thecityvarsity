@@ -48,7 +48,7 @@ export default function Title(title: string, subtitle: string, buttonText: strin
                 <b>{subtitle}</b>
             </h2>
             {ticketButton}
-            {PROGRAMME_LINK && PROGRAMME_LINK !== "" && programButton}
+            {PROGRAMME_LINK && programButton}
             </div>
         </div>  
         </div>
